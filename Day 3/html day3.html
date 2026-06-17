@@ -1,0 +1,70 @@
+<!-- /*Lists, tables, and semantic tags (header, nav, main, section, article, footer). Simple personal bio page. */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah - Personal Bio</title>
+</head>
+
+<body>
+    <!-- //The <header> element is used to define the header section of the web page, which typically contains the site title and a brief description. In this case, it includes the name "Abdullah" and the profession "Web Developer". -->
+    <header>
+        <h1>Abdullah</h1>
+        <p>Web Developer</p>
+    </header>
+    <!-- //The <nav> element is used to define a navigation menu for the web page. It contains an unordered list (<ul>) with list items (<li>) that link to different sections of the page using anchor tags (<a>). Each link corresponds to a section with a specific ID (e.g., #about, #skills, #contact), allowing users to navigate to those sections when they click on the links. -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- //The <main> element is used to define the main content of the web page. It contains multiple <section> elements, each representing a different section of the page. The sections include "About Me," "Skills," and "Contact," each with its own heading and content. The "Contact" section also includes a table to display contact information. -->
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc bibendum
+                fermentum.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <table border="1">
+                <tr>
+                    <th>Email</th>
+                    <td>abdullah@example.com</td>
+                </tr>
+                <tr>
+                    <th>Contact No</th>
+                    <td>012-345-6789</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- //The <article> element is used to define a self-contained piece of content that could be distributed independently. In this case, it represents a blog section with a heading "My Blog" and a brief description. -->
+    <article>
+        <h2>My Blog</h2>
+        <p>This is a simple blog section.</p>
+    </article>
+    <!-- //The <footer> element is used to define the footer section of the web page, which contains copyright information or other details. In this case, it includes a copyright notice for "Abdullah" and the year 2025. -->
+    <footer>
+        <p>&copy; 2025 Abdullah. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
