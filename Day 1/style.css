@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*it is a simple CSS file that styles the body and h1 elements. The body has a font family of Arial, no margin or padding, while the h1 element is centered with a specific color and margin. it is the styling for the html structure ie furnishing of the structure */
