@@ -1,0 +1,71 @@
+<!-- Multimedia (audio/video tags), iframes, and accessibility basics (alt text, ARIA landmarks, semantic
+structure) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ARIA landmarks for accessibility -->
+    <header role="banner">
+        <h1>Website Header</h1>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main role="main">
+        <h2>Main Content</h2>
+        <p>This is the main content area of the webpage.</p>
+    </main>
+
+    //semantic structure with sections and articles
+    <section role="region" aria-labelledby="about-section">
+        <h2 id="about-section">About Section</h2>
+        <p>This section provides information about the website or the author.</p>
+    </section>
+
+    <section role="region" aria-labelledby="contact-section">
+        <h2 id="contact-section">Contact Section</h2>
+        <p>This section provides contact information or a contact form.</p>
+    </section>
+
+    <h1>Multimedia Example</h1>
+
+    <!-- Audio element with controls -->
+    <audio controls>
+        <source
+            src="Ek_Chumma_Video_-_Housefull_4_-_Akshay_K,_Riteish_D,_Bobby_D,_Kriti_S,_Pooja,_Kriti_K_-_Sohail_Sen(128kbps).m4a by Sagr Lohana.mp3"
+            type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Video element with controls -->
+    <video width="320" height="240" controls>
+        <source src="khasara.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Iframe embedding a YouTube video -->
+    <iframe width="560" height="315" src="https://youtu.be/mn8MwFb8WOk?si=IiOPDuUa1WO9fIPW" title="YouTube video player"
+        frameborder="0" allowfullscreen></iframe>
+
+
+    <!-- Image with alt text for accessibility -->
+    <img src="WhatsApp Image 2025-03-10 at 12.10.55 PM.JPG" alt="Description of the image for screen readers">
+
+
+
+</body>
+
+</html>
