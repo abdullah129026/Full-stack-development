@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Etch-a-Sketch</h1>
+        <div class="controls">
+            <button id="resize-btn" class="primary-btn">Resize Grid</button>
+            <div class="mode-toggles">
+                <button id="classic-btn" class="mode-btn active" data-mode="classic">Classic</button>
+                <button id="rgb-btn" class="mode-btn" data-mode="rgb">Random RGB</button>
+                <button id="darkening-btn" class="mode-btn" data-mode="darkening">Darkening</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="grid-container" class="grid-container"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

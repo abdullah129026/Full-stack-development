@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence CRM Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h2>Essence</h2>
+                </div>
+                <nav class="nav-menu">
+                    <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-border-all icon"></i> Dashboard</a>
+                    <a href="inbox.html" class="nav-item"><i class="fa-solid fa-inbox icon"></i> Inbox</a>
+                    <a href="calendar.html" class="nav-item"><i class="fa-regular fa-calendar icon"></i> Calendar</a>
+                    <a href="index.html" class="nav-item active"><i class="fa-regular fa-user icon"></i> Employees</a>
+                    <a href="performance.html" class="nav-item"><i class="fa-solid fa-chart-line icon"></i> Performance</a>
+                    <a href="payroll.html" class="nav-item"><i class="fa-solid fa-file-invoice-dollar icon"></i> Payroll</a>
+                    <a href="leave-management.html" class="nav-item"><i class="fa-solid fa-umbrella-beach icon"></i> Leave Management</a>
+                    <a href="recruitment.html" class="nav-item"><i class="fa-solid fa-user-plus icon"></i> Recruitment</a>
+                </nav>
+            </div>
+            
+            <div class="sidebar-promo">
+                <h4>Level Up Your HR System</h4>
+                <p>Essence Pro gives you full control with advanced modules and extended layouts.</p>
+                <button class="btn-primary">Get Essence Pro</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumb-area">
+                    <a href="#" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Employee Details</a>
+                    <div class="breadcrumb">Dashboard / Employees / Employee Details</div>
+                </div>
+                <div class="topbar-actions">
+                    <div class="search-container">
+                        <i class="fa-solid fa-search search-icon"></i>
+                        <input type="text" placeholder="Search anything" class="search-input">
+                    </div>
+                    <div class="notification-bell">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Davis+Levin&background=20c997&color=fff" alt="Davis Levin" class="avatar" width="40">
+                        <span>Davis Levin</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <!-- Profile Card (Column 1) -->
+                <section class="card profile-card" style="grid-row: span 2;">
+                    <div class="profile-header">
+                        <img src="https://ui-avatars.com/api/?name=Mia+Torres&background=random" alt="Mia Torres" class="profile-avatar" width="100">
+                        <h3>Mia Torres</h3>
+                        <p class="role">HR Officer | Human Resources</p>
+                        <div class="badges">
+                            <span class="badge gray">EMP-0289</span>
+                            <span class="badge active">Active</span>
+                        </div>
+                    </div>
+
+                    <div class="info-list">
+                        <div class="info-item"><span>Employment Type</span> <strong>Full-Time</strong></div>
+                        <div class="info-item"><span>Work Model</span> <strong>Hybrid</strong></div>
+                        <div class="info-item"><span>Join Date</span> <strong>14 February 2033</strong></div>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-text">
+                                <span>Phone</span>
+                                <strong>+62 812-3456-7890</strong>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-text">
+                                <span>Address</span>
+                                <strong>Jl. Melati No. 45, Sleman, Yogyakarta, Indonesia</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <span>Social Media:</span>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer-links">
+                         <span>Copyright &copy; 2035 Essence</span>
+                         <a href="#">Privacy Policy</a>
+                         <a href="#">Terms and conditions</a>
+                         <a href="#">Contact</a>
+                    </div>
+                </section>
+
+                <!-- Leave Metrics (Column 2 & 3 top) -->
+                <section class="leaves-container">
+                    <div class="card leave-card">
+                        <h4>All Leaves</h4>
+                        <div class="circular-progress" style="--progress: 70deg; --progress-color: var(--color-primary-base);">
+                            <div class="inner-circle"><strong>14/20</strong><span>Days</span></div>
+                        </div>
+                    </div>
+                    <div class="card leave-card">
+                        <h4>Annual Leaves</h4>
+                        <div class="circular-progress" style="--progress: 240deg; --progress-color: #60a5fa;">
+                            <div class="inner-circle"><strong>10/15</strong><span>Days</span></div>
+                        </div>
+                    </div>
+                    <div class="card leave-card">
+                        <h4>Casual Leaves</h4>
+                        <div class="circular-progress" style="--progress: 120deg; --progress-color: #f472b6;">
+                            <div class="inner-circle"><strong>8/24</strong><span>Hours</span></div>
+                        </div>
+                    </div>
+                    <div class="card leave-card">
+                        <h4>Sick Leaves</h4>
+                        <div class="circular-progress" style="--progress: 77deg; --progress-color: #a78bfa;">
+                            <div class="inner-circle"><strong>3/14</strong><span>Days</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hours Logged (Column 2 middle) -->
+                <section class="card hours-card">
+                    <div class="card-header">
+                        <h3>Hours Logged</h3>
+                        <select class="custom-select"><option>This Week</option></select>
+                    </div>
+                    <div class="stat-highlight">
+                        <h2>34<small>h</small> 30<small>m</small></h2>
+                    </div>
+                    <div class="bar-chart">
+                        <div class="bar-col"><div class="bar" style="height: 60%; background-color: var(--color-primary-hover);"></div><span>M</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 80%; background-color: var(--color-primary-base);"></div><span>T</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 75%; background-color: var(--color-primary-base);"></div><span>W</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 50%; background-color: var(--color-primary-base);"></div><span>T</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 65%; background-color: var(--color-primary-hover);"></div><span>F</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 0%; background-color: #e5e7eb;"></div><span>S</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 0%; background-color: #e5e7eb;"></div><span>S</span></div>
+                    </div>
+                </section>
+
+                <!-- Performance Overview (Column 3 middle) -->
+                <section class="card performance-card">
+                    <div class="card-header">
+                        <h3>Performance Overview</h3>
+                        <select class="custom-select"><option>Last Year</option></select>
+                    </div>
+                    <div class="stat-highlight">
+                        <h2>86.75%</h2>
+                        <span class="growth positive"><i class="fa-solid fa-arrow-trend-up"></i> +2.05% Increased by last year</span>
+                    </div>
+                    <div class="line-chart-mock">
+                        <svg viewBox="0 0 400 100" class="chart-line" preserveAspectRatio="none">
+                            <path d="M 0 80 Q 50 60 100 70 T 200 40 T 300 50 T 400 20" fill="none" stroke="var(--color-primary-base)" stroke-width="3"/>
+                            <path d="M 0 80 Q 50 60 100 70 T 200 40 T 300 50 T 400 20 L 400 100 L 0 100" fill="rgba(32, 201, 151, 0.1)" stroke="none"/>
+                        </svg>
+                        <div class="x-axis">
+                            <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Internal Notes (Column 2 bottom) -->
+                <section class="card notes-card">
+                    <div class="card-header">
+                        <h3>Internal Notes</h3>
+                        <i class="fa-solid fa-ellipsis icon-btn"></i>
+                    </div>
+                    <div class="notes-grid">
+                        <div class="note-box">
+                            <strong>Promotion Feedback</strong>
+                            <span class="note-date">10 January 2035</span>
+                            <p>Promoted from HR Assistant to HR Officer due to consistent performance and leadership in onboarding initiatives.</p>
+                        </div>
+                        <div class="note-box highlight">
+                            <strong>Employee Appreciation</strong>
+                            <span class="note-date">02 May 2035</span>
+                            <p>Recognized by the Head of HR for successfully leading the Q2 training rollout with a 98% participation rate.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Documents (Column 3 bottom) -->
+                <section class="card documents-card">
+                    <div class="card-header">
+                        <h3>Documents</h3>
+                        <i class="fa-solid fa-ellipsis icon-btn"></i>
+                    </div>
+                    <ul class="doc-list">
+                        <li class="doc-item">
+                            <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div class="doc-info">
+                                <strong>Performance Evaluation.pdf</strong>
+                                <small>PDF &middot; 1.24 MB</small>
+                            </div>
+                        </li>
+                        <li class="doc-item">
+                            <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div class="doc-info">
+                                <strong>Contract Agreement.pdf</strong>
+                                <small>PDF &middot; 895 KB</small>
+                            </div>
+                        </li>
+                        <li class="doc-item">
+                            <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div class="doc-info">
+                                <strong>Curriculum Vitae.pdf</strong>
+                                <small>PDF &middot; 1.27 MB</small>
+                            </div>
+                        </li>
+                        <li class="doc-item">
+                            <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div class="doc-info">
+                                <strong>Portfolio.pdf</strong>
+                                <small>PDF &middot; 3.68 MB</small>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Right Column (Column 4 Top+Middle) -->
+                <div class="right-col-wrap" style="display: flex; flex-direction: column; gap: 24px;">
+                    <!-- Calendar Widget -->
+                    <section class="card calendar-card">
+                         <div class="card-header">
+                            <h3 class="month-title">June 2035 <i class="fa-solid fa-chevron-down"></i></h3>
+                            <div class="cal-actions">
+                                <button class="icon-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="icon-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="calendar-wrapper">
+                            <div class="cal-days"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+                            <div class="cal-grid">
+                                <span class="muted">27</span><span class="muted">28</span><span class="muted">29</span><span class="muted">30</span><span class="muted">31</span><span class="active">1</span><span>2</span>
+                                <span>3</span><span class="event green">4</span><span>5</span><span class="event gray">6</span><span>7</span><span>8</span><span>9</span>
+                                <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span class="event teal">15</span><span>16</span>
+                                <span>17</span><span>18</span><span>19</span><span class="event teal">20</span><span class="event teal">21</span><span>22</span><span>23</span>
+                                <span>24</span><span>25</span><span class="active">26</span><span>27</span><span class="event teal">28</span><span>29</span><span>30</span>
+                            </div>
+                        </div>
+                        <div class="cal-legend">
+                            <div class="legend-item"><strong style="color:var(--color-primary-base)">13</strong><span>Present</span></div>
+                            <div class="legend-item"><strong style="color:#f59e0b">5</strong><span>Late</span></div>
+                            <div class="legend-item"><strong style="color:#ef4444">2</strong><span>On Leave</span></div>
+                            <div class="legend-item"><strong>1</strong><span>Absent</span></div>
+                        </div>
+                    </section>
+
+                    <!-- Payroll Summary -->
+                    <section class="card payroll-card">
+                        <div class="card-header">
+                           <h3>Payroll Summary</h3>
+                           <i class="fa-solid fa-ellipsis icon-btn"></i>
+                       </div>
+                       <div class="payroll-table">
+                           <div class="table-row header"><span>Description</span><span>Amount USD</span></div>
+                           <div class="table-row"><span>Base Salary</span><strong>$3,200</strong></div>
+                           
+                           <div class="table-section-title">Allowances</div>
+                           <div class="table-row"><span>Transportation</span><strong>$120</strong></div>
+                           <div class="table-row"><span>Meal</span><strong>$110</strong></div>
+                           <div class="table-row"><span>Internet (Hybrid)</span><strong>$70</strong></div>
+
+                           <div class="table-section-title">Benefits</div>
+                           <div class="table-row"><span>Health Insurance</span><strong>$120</strong></div>
+                           <div class="table-row"><span>Life Insurance</span><strong>$40</strong></div>
+                           <div class="table-row"><span>Company Device</span><strong>$65</strong></div>
+                           <div class="table-row"><span>Training Program</span><strong>$80</strong></div>
+                           <div class="table-row"><span>Fitness Membership</span><strong>$50</strong></div>
+
+                           <div class="table-row total-row">
+                               <span>Total Monthly Value</span><strong>$3,855</strong>
+                           </div>
+                       </div>
+                   </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

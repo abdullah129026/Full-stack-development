@@ -1,0 +1,33 @@
+/* <!-- CSS syntax, selectors, specificity, the box model (margin/border/padding/content). --> */
+#css-syntax {
+    color: red;
+    content: "This is a CSS syntax example.";
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+    background-color: lightgray;
+
+}
+
+.Selectors {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: lightgray;
+}
+
+.Specificity {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+/* .class, #id, element, universal, attribute, pseudo-class, pseudo-element */
+/* Specificity: inline > id > class > element */
+/* Box model: content, padding, border, margin */

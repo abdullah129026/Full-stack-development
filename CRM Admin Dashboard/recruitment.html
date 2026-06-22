@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence - Recruitment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo"><i class="fa-solid fa-leaf"></i><h2>Essence</h2></div>
+                <nav class="nav-menu">
+                    <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-border-all icon"></i> Dashboard</a>
+                    <a href="inbox.html" class="nav-item"><i class="fa-solid fa-inbox icon"></i> Inbox</a>
+                    <a href="calendar.html" class="nav-item"><i class="fa-regular fa-calendar icon"></i> Calendar</a>
+                    <a href="index.html" class="nav-item"><i class="fa-regular fa-user icon"></i> Employees</a>
+                    <a href="performance.html" class="nav-item"><i class="fa-solid fa-chart-line icon"></i> Performance</a>
+                    <a href="payroll.html" class="nav-item"><i class="fa-solid fa-file-invoice-dollar icon"></i> Payroll</a>
+                    <a href="leave-management.html" class="nav-item"><i class="fa-solid fa-umbrella-beach icon"></i> Leave Management</a>
+                    <a href="recruitment.html" class="nav-item active"><i class="fa-solid fa-user-plus icon"></i> Recruitment</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumb-area"><div class="breadcrumb">Dashboard / Recruitment</div></div>
+                <div class="topbar-actions">
+                    <button class="btn-primary" style="width:auto; padding: 10px 24px;">+ Post Job</button>
+                    <div class="user-profile"><img src="https://ui-avatars.com/api/?name=Davis+Levin&background=20c997&color=fff" class="avatar" width="40"><span>Davis Levin</span></div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid" style="grid-template-columns: 1fr 1fr;">
+                <section class="card">
+                    <div class="card-header"><h3>Recruitment Pipeline</h3></div>
+                    <div style="display:flex; gap:24px; text-align:center; margin-top:24px;">
+                        <div style="flex:1; padding:24px; background:var(--color-surface-base); border-radius:var(--radius-sm);">
+                            <h2 style="font-size:32px; color:var(--color-primary-base); margin-bottom:8px;">146</h2>
+                            <span style="font-size:14px; color:var(--color-text-secondary);">Applied</span>
+                        </div>
+                        <div style="flex:1; padding:24px; background:var(--color-surface-base); border-radius:var(--radius-sm);">
+                            <h2 style="font-size:32px; color:#3b82f6; margin-bottom:8px;">42</h2>
+                            <span style="font-size:14px; color:var(--color-text-secondary);">Interviewed</span>
+                        </div>
+                        <div style="flex:1; padding:24px; background:var(--color-surface-base); border-radius:var(--radius-sm);">
+                            <h2 style="font-size:32px; color:#10b981; margin-bottom:8px;">12</h2>
+                            <span style="font-size:14px; color:var(--color-text-secondary);">Hired</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card-header"><h3>Current Vacancies</h3></div>
+                    <ul class="doc-list">
+                        <li class="doc-item" style="justify-content:space-between;">
+                            <div>
+                                <strong style="display:block; margin-bottom:4px;">UI/UX Designer</strong>
+                                <span class="badge" style="background:#e0f2fe; color:#0284c7; font-size:10px;">Full Time</span>
+                                <span class="badge" style="background:#f3f4f6; color:#4b5563; font-size:10px;">Remote</span>
+                            </div>
+                            <button class="btn-primary" style="width:auto; padding:6px 12px; font-size:12px;">View Candidates</button>
+                        </li>
+                        <li class="doc-item" style="justify-content:space-between;">
+                            <div>
+                                <strong style="display:block; margin-bottom:4px;">Sales Manager</strong>
+                                <span class="badge" style="background:#e0f2fe; color:#0284c7; font-size:10px;">Full Time</span>
+                                <span class="badge" style="background:#f3f4f6; color:#4b5563; font-size:10px;">On-site</span>
+                            </div>
+                            <button class="btn-primary" style="width:auto; padding:6px 12px; font-size:12px;">View Candidates</button>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

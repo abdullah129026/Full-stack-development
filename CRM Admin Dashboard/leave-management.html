@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence - Leave Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo"><i class="fa-solid fa-leaf"></i><h2>Essence</h2></div>
+                <nav class="nav-menu">
+                    <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-border-all icon"></i> Dashboard</a>
+                    <a href="inbox.html" class="nav-item"><i class="fa-solid fa-inbox icon"></i> Inbox</a>
+                    <a href="calendar.html" class="nav-item"><i class="fa-regular fa-calendar icon"></i> Calendar</a>
+                    <a href="index.html" class="nav-item"><i class="fa-regular fa-user icon"></i> Employees</a>
+                    <a href="performance.html" class="nav-item"><i class="fa-solid fa-chart-line icon"></i> Performance</a>
+                    <a href="payroll.html" class="nav-item"><i class="fa-solid fa-file-invoice-dollar icon"></i> Payroll</a>
+                    <a href="leave-management.html" class="nav-item active"><i class="fa-solid fa-umbrella-beach icon"></i> Leave Management</a>
+                    <a href="recruitment.html" class="nav-item"><i class="fa-solid fa-user-plus icon"></i> Recruitment</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumb-area"><div class="breadcrumb">Dashboard / Leave Management</div></div>
+                <div class="topbar-actions">
+                    <div class="user-profile"><img src="https://ui-avatars.com/api/?name=Davis+Levin&background=20c997&color=fff" class="avatar" width="40"><span>Davis Levin</span></div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid" style="grid-template-columns: 1fr 1fr;">
+                <section class="card leaves-container" style="grid-column: span 2;">
+                    <div class="leave-card" style="align-items:flex-start; text-align:left;">
+                        <h4 style="margin-bottom:4px;">Employees on Leave Today</h4>
+                        <strong style="font-size:24px; color:var(--color-primary-base);">6</strong>
+                    </div>
+                    <div class="leave-card" style="align-items:flex-start; text-align:left;">
+                        <h4 style="margin-bottom:4px;">Annual Leave</h4>
+                        <strong style="font-size:24px; color:#60a5fa;">3</strong>
+                    </div>
+                    <div class="leave-card" style="align-items:flex-start; text-align:left;">
+                        <h4 style="margin-bottom:4px;">Sick Leave</h4>
+                        <strong style="font-size:24px; color:#a78bfa;">2</strong>
+                    </div>
+                    <div class="leave-card" style="align-items:flex-start; text-align:left;">
+                        <h4 style="margin-bottom:4px;">Other Leave</h4>
+                        <strong style="font-size:24px; color:#f472b6;">1</strong>
+                    </div>
+                </section>
+
+                <section class="card" style="grid-column: span 2;">
+                    <div class="card-header"><h3>Leave Activity</h3></div>
+                    <div class="payroll-table">
+                        <div class="table-row header">
+                            <span style="flex:2;">Employee</span><span style="flex:1;">Role</span><span style="flex:1;">Leave Type</span>
+                            <span style="flex:1;">Duration</span><span style="flex:1;">Status</span><span style="flex:1; text-align:right;">Actions</span>
+                        </div>
+                        <div class="table-row" style="align-items:center;">
+                            <div style="flex:2; display:flex; align-items:center; gap:12px;">
+                                <img src="https://ui-avatars.com/api/?name=Olivia+Mason" width="32" style="border-radius:50%;"><strong>Olivia Mason</strong>
+                            </div>
+                            <span style="flex:1;">Marketing</span><span style="flex:1;">Annual Leave</span><span style="flex:1;">2 Days</span>
+                            <span style="flex:1;"><span class="badge" style="background:#fef08a; color:#a16207;">Pending</span></span>
+                            <div style="flex:1; text-align:right; display:flex; gap:8px; justify-content:flex-end;">
+                                <button class="btn-primary" style="padding: 4px 12px; width:auto; font-size:12px;">Approve</button>
+                                <button class="btn-primary" style="padding: 4px 12px; width:auto; font-size:12px; background:white; color:#ef4444; border:1px solid #ef4444;">Reject</button>
+                            </div>
+                        </div>
+                        <div class="table-row" style="align-items:center;">
+                            <div style="flex:2; display:flex; align-items:center; gap:12px;">
+                                <img src="https://ui-avatars.com/api/?name=Mia+Torres" width="32" style="border-radius:50%;"><strong>Mia Torres</strong>
+                            </div>
+                            <span style="flex:1;">HR Officer</span><span style="flex:1;">Sick Leave</span><span style="flex:1;">1 Day</span>
+                            <span style="flex:1;"><span class="badge" style="background:#e6f9f0; color:#10b981;">Approved</span></span>
+                            <div style="flex:1; text-align:right;">
+                                <span style="color:var(--color-text-secondary); font-size:12px;">Processed</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

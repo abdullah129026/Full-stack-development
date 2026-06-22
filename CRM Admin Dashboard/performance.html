@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence - Performance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo"><i class="fa-solid fa-leaf"></i><h2>Essence</h2></div>
+                <nav class="nav-menu">
+                    <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-border-all icon"></i> Dashboard</a>
+                    <a href="inbox.html" class="nav-item"><i class="fa-solid fa-inbox icon"></i> Inbox</a>
+                    <a href="calendar.html" class="nav-item"><i class="fa-regular fa-calendar icon"></i> Calendar</a>
+                    <a href="index.html" class="nav-item"><i class="fa-regular fa-user icon"></i> Employees</a>
+                    <a href="performance.html" class="nav-item active"><i class="fa-solid fa-chart-line icon"></i> Performance</a>
+                    <a href="payroll.html" class="nav-item"><i class="fa-solid fa-file-invoice-dollar icon"></i> Payroll</a>
+                    <a href="leave-management.html" class="nav-item"><i class="fa-solid fa-umbrella-beach icon"></i> Leave Management</a>
+                    <a href="recruitment.html" class="nav-item"><i class="fa-solid fa-user-plus icon"></i> Recruitment</a>
+                </nav>
+            </div>
+            <div class="sidebar-promo">
+                <h4>Level Up Your HR System</h4>
+                <p>Essence Pro gives you full control with advanced modules and extended layouts.</p>
+                <button class="btn-primary">Get Essence Pro</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumb-area">
+                    <div class="breadcrumb">Dashboard / Performance</div>
+                </div>
+                <div class="topbar-actions">
+                    <div class="search-container">
+                        <i class="fa-solid fa-search search-icon"></i>
+                        <input type="text" placeholder="Search anything" class="search-input">
+                    </div>
+                    <div class="notification-bell"><i class="fa-regular fa-bell"></i></div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Davis+Levin&background=20c997&color=fff" alt="Davis Levin" class="avatar" width="40">
+                        <span>Davis Levin</span><i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid" style="grid-template-columns: 1fr 1fr;">
+                <section class="card">
+                    <div class="card-header"><h3>Team Performance</h3><select class="custom-select"><option>Last Year</option></select></div>
+                    <div class="stat-highlight"><h2>92%</h2><span class="growth positive"><i class="fa-solid fa-arrow-trend-up"></i> +5.2% vs last year</span></div>
+                    <div class="bar-chart" style="height: 150px;">
+                        <div class="bar-col"><div class="bar" style="height: 40%; background-color: var(--color-primary-base);"></div><span>Q1</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 60%; background-color: var(--color-primary-base);"></div><span>Q2</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 90%; background-color: var(--color-primary-hover);"></div><span>Q3</span></div>
+                        <div class="bar-col"><div class="bar" style="height: 70%; background-color: var(--color-primary-base);"></div><span>Q4</span></div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card-header"><h3>Top Performers</h3></div>
+                    <div class="info-list">
+                        <div class="info-item" style="align-items: center;">
+                            <div style="display:flex; gap: 12px; align-items:center;">
+                                <img src="https://ui-avatars.com/api/?name=Mia+Torres" width="40" style="border-radius:50%;">
+                                <div><strong>Mia Torres</strong><br><span style="font-size:12px;">HR Officer</span></div>
+                            </div>
+                            <span class="badge active" style="font-size:14px;">96 / 100</span>
+                        </div>
+                        <div class="info-item" style="align-items: center;">
+                            <div style="display:flex; gap: 12px; align-items:center;">
+                                <img src="https://ui-avatars.com/api/?name=John+Doe" width="40" style="border-radius:50%;">
+                                <div><strong>John Doe</strong><br><span style="font-size:12px;">Developer</span></div>
+                            </div>
+                            <span class="badge active" style="font-size:14px;">92 / 100</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card" style="grid-column: span 2;">
+                    <div class="card-header"><h3>Employee Performance</h3></div>
+                    <div class="payroll-table">
+                        <div class="table-row header">
+                            <span style="flex:2;">Employee</span>
+                            <span style="flex:1;">Role</span>
+                            <span style="flex:1;">Work Quality</span>
+                            <span style="flex:1;">Communication</span>
+                            <span style="flex:1;">Total Score</span>
+                        </div>
+                        <div class="table-row">
+                            <strong style="flex:2;">Mia Torres</strong>
+                            <span style="flex:1;">HR Officer</span>
+                            <span style="flex:1;">4.8/5</span>
+                            <span style="flex:1;">4.9/5</span>
+                            <strong style="flex:1;">96</strong>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

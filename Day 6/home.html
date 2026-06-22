@@ -1,0 +1,41 @@
+<!-- 3-page static HTML site (Home, About, Contact) with proper semantic structure
+and internal links. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ARIA landmarks for accessibility -->
+    <header role="banner">
+        <h1>Website Header</h1>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main role="main">
+        <h2>Main Content</h2>
+        <p>This is the main content area of the webpage.</p>
+    </main>
+
+    //semantic structure with sections and articles
+    <section role="region" aria-labelledby="about-section">
+        <h2 id="about-section">About Section</h2>
+        <p>This section provides information about the website or the author.</p>
+    </section>
+
+    <section role="region" aria-labelledby="contact-section">
+        <h2 id="contact-section">Contact Section</h2>
+        <p>This section provides contact information or a contact form.</p>
+    </section>
