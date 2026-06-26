@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Battleship: Neon Command</title>
+  <!-- Google Fonts for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Decorative background elements -->
+  <div class="stars"></div>
+  <div class="neon-grid-bg"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-light">NEON</span>
+        <span class="logo-bold">BATTLESHIP</span>
+      </div>
+      <div class="status-indicator">
+        <span class="pulse-dot"></span>
+        <span id="system-status">SYS_STATUS: ONLINE</span>
+      </div>
+    </header>
+
+    <!-- ─── SCREEN 1: MAIN MENU ─── -->
+    <section id="screen-menu" class="screen active">
+      <div class="menu-card glass-panel animate-fade-in">
+        <h1 class="menu-title">Select Combat Mode</h1>
+        <p class="menu-subtitle">Configure your tactical naval engagement</p>
+        
+        <div class="mode-options">
+          <button id="btn-mode-cpu" class="btn btn-primary btn-glowing">
+            <span class="btn-icon">🤖</span>
+            <div class="btn-text">
+              <span class="title">VS COMPUTER</span>
+              <span class="desc">Challenging Hunt & Target AI</span>
+            </div>
+          </button>
+
+          <button id="btn-mode-p2" class="btn btn-secondary">
+            <span class="btn-icon">👥</span>
+            <div class="btn-text">
+              <span class="title">PASS & PLAY</span>
+              <span class="desc">Local 2-Player Combat</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCREEN 2: SETUP SCREEN ─── -->
+    <section id="screen-setup" class="screen">
+      <div class="setup-layout">
+        <!-- Setup Sidebar Controls -->
+        <div class="setup-controls glass-panel animate-slide-in">
+          <h2 id="setup-title" class="section-title">Deploy Fleet</h2>
+          <p id="setup-subtitle" class="section-subtitle">Drag ships onto the tactical grid</p>
+          
+          <div class="setup-actions">
+            <button id="btn-toggle-axis" class="btn-setup">
+              <span class="icon">🔄</span> Rotate: <span id="current-axis-label">Horizontal</span>
+            </button>
+            <button id="btn-auto-place" class="btn-setup secondary">
+              ⚡ Auto Deploy
+            </button>
+          </div>
+
+          <div class="ship-yard">
+            <h3>Available Fleet</h3>
+            <div id="ship-yard-dock" class="dock">
+              <!-- Ship options will be rendered here dynamically -->
+            </div>
+          </div>
+
+          <button id="btn-start-combat" class="btn btn-primary full-width disabled" disabled>
+            LAUNCH COMBAT OPERATION
+          </button>
+        </div>
+
+        <!-- Setup Board Grid -->
+        <div class="setup-board-wrapper glass-panel animate-scale-up">
+          <h3 id="setup-board-owner" class="board-owner">PLAYER 1 WATERSPACE</h3>
+          <div class="board-container">
+            <div id="setup-board-grid" class="grid-10x10"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCREEN 3: BATTLE SCREEN ─── -->
+    <section id="screen-battle" class="screen">
+      <div class="battle-header glass-panel">
+        <div class="turn-announcer">
+          <span class="label">CURRENT TURN</span>
+          <h2 id="current-turn-display" class="turn-name">PLAYER 1</h2>
+        </div>
+        <div id="battle-log" class="battle-log">
+          System ready. Select a target cell on the enemy coordinate map.
+        </div>
+      </div>
+
+      <div class="battle-boards">
+        <!-- Friendly Board -->
+        <div class="board-card friendly glass-panel animate-slide-in">
+          <h3 id="friendly-board-label" class="board-label">YOUR FLEET MAP</h3>
+          <div class="board-container">
+            <div id="friendly-board-grid" class="grid-10x10"></div>
+          </div>
+          <div id="friendly-status-stats" class="board-stats">
+            Ships Sunk: <span id="friendly-sunk-count">0/5</span>
+          </div>
+        </div>
+
+        <!-- Enemy Target Board -->
+        <div class="board-card enemy glass-panel animate-slide-in-right">
+          <h3 id="enemy-board-label" class="board-label">ENEMY TARGET GRID</h3>
+          <div class="board-container">
+            <div id="enemy-board-grid" class="grid-10x10 targeting-mode"></div>
+          </div>
+          <div id="enemy-status-stats" class="board-stats">
+            Ships Sunk: <span id="enemy-sunk-count">0/5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ─── INTERSTITIAL OVERLAY ─── -->
+  <div id="pass-interstitial" class="overlay">
+    <div class="interstitial-card glass-panel animate-scale-up">
+      <h2 class="interstitial-title">TURN OVER</h2>
+      <p id="pass-interstitial-text" class="interstitial-text">Pass the device to Player 2.</p>
+      <div class="device-pass-graphic">
+        <div class="phone-icon">
+          <div class="phone-screen"></div>
+        </div>
+        <div class="pass-arrow">➡️</div>
+      </div>
+      <button id="btn-reveal-board" class="btn btn-primary btn-glowing">
+        REVEAL TACTICAL MAPS
+      </button>
+    </div>
+  </div>
+
+  <!-- ─── GAME OVER OVERLAY ─── -->
+  <div id="game-over-overlay" class="overlay">
+    <div class="victory-card glass-panel animate-scale-up">
+      <div class="laurel-wreath">🏆</div>
+      <h1 id="game-over-title" class="victory-title">VICTORY</h1>
+      <p id="game-over-subtitle" class="victory-subtitle">Player 1 has successfully decimated the enemy fleet.</p>
+      
+      <div class="match-summary">
+        <div class="summary-item">
+          <span class="label">Attacks Launched</span>
+          <span id="summary-attacks" class="val">0</span>
+        </div>
+        <div class="summary-item">
+          <span class="label">Accuracy</span>
+          <span id="summary-accuracy" class="val">0%</span>
+        </div>
+      </div>
+
+      <button id="btn-restart" class="btn btn-primary btn-glowing">
+        RETURN TO PORT (PLAY AGAIN)
+      </button>
+    </div>
+  </div>
+
+  <!-- Main scripts -->
+  <script type="module" src="game.js"></script>
+</body>
+</html>

@@ -10,7 +10,7 @@
 <body>
     <script>
         //fetch api
-  
+
 
         //getting data
 
@@ -33,26 +33,60 @@
 
 
         //posting data
-        
 
-        var obj={name:"A B",age:20,city:"Islamabad"}
 
-        fetch("https://jsonplaceholder.typicode.com/users",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify(obj)
-        })
-        .then((response)=>{
-            return response.json();
-        })
-        .then((data)=>{
+        // var obj={name:"A B",age:20,city:"Islamabad"}
+
+        // fetch("https://jsonplaceholder.typicode.com/users",{
+        //     method:"POST",
+        //     headers:{
+        //         "Content-Type":"application/json"
+        //     },
+        //     body:JSON.stringify(obj)
+        // })
+        // .then((response)=>{
+        //     return response.json();
+        // })
+        // .then((data)=>{
+        //     console.log(data);
+        // })
+        // .catch((error)=>{
+        //     console.log(error);
+        // })
+
+
+
+        //async await
+
+        async function getData() {
+            const response = await fetch("data.json");
+            const data = await response.json();
             console.log(data);
-        })
-        .catch((error)=>{
-            console.log(error);
-        })
+        }
+        getData();
+
+
+        async function postData() {
+            const response = await fetch("data.json", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name: "Ali", age: 20, city: "Islamabad" })
+            });
+            const data = await response.json();
+            console.log(data);
+        }
+        postData();
+
+        async function getData() {
+            const response = await fetch("data.json");
+            const data = await response.json();
+            console.log(data);
+        }
+        getData();
+
+
     </script>
 
 </body>

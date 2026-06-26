@@ -386,3 +386,116 @@
 // xhttp.send();
 
 
+// Merge sort
+
+// function mergeSort(arr) {
+
+//     if (arr.length <= 1) {
+//         return arr;
+//     }
+
+//     let low = 0;
+//     let high = arr.length - 1;
+//     let mid = Math.floor((low + high) / 2);
+
+//     let left = mergeSort(arr.slice(low, mid + 1));
+//     let right = mergeSort(arr.slice(mid + 1, high + 1));
+
+//     return merge(left, right);
+// }
+
+// function merge(left, right) {
+//     let result = [];
+//     while (left.length > 0 && right.length > 0) {
+//         if (left[0] < right[0]) {
+//             result.push(left.shift());
+//         } else {
+//             result.push(right.shift());
+//         }
+//     }
+//     return result.concat(left).concat(right);
+// }
+
+//hashmap 
+
+// function createhashmap(arr){
+//     let map=new Map();
+//     for(let i=0;i<arr.length;i++){
+//         if(map.has(arr[i])){
+//             map.set(arr[i],map.get(arr[i])+1);
+//         }else{
+//             map.set(arr[i],1);
+//         }
+//     }
+//     return map;
+// }
+// console.log(createhashmap([1,2,2,3,3,3,4,4,4,4]));
+
+
+//iterators
+
+// let numbers = [10, 20, 30, 40, 50];
+// let iterator = numbers[Symbol.iterator]();
+// console.log(iterator.next());
+
+
+//binary search tree
+
+// class Node {
+//     constructor(data) {
+//         this.data = data;
+//         this.left = null;
+//         this.right = null;
+//     }
+// };
+// class binarySearch {
+//     constructor() {
+//         this.root = null;
+//     }
+//     insert(data) {
+//         let node = new Node(data);
+//         if (this.root === null) {
+//             this.root = node;
+//         } else {
+//             this.insertNode(this.root, node);
+//         }
+//     }
+//     insertNode(node, newNode) {
+//         if (newNode.data < node.data) {
+//             if (node.left === null) {
+//                 node.left = newNode;
+//             } else {
+//                 this.insertNode(node.left, newNode);
+//             }
+//         } else {
+//             if (node.right === null) {
+//                 node.right = newNode;
+//             } else {
+//                 this.insertNode(node.right, newNode);
+//             }
+//         }
+//     }
+// };
+
+// inorder(node)
+// {
+//     if(node !== null){
+//         this.inorder(node.left);
+//         console.log(node.data);
+//         this.inorder(node.right);
+//     }
+// };
+
+
+//generators
+
+function* gen(){
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+let iterator = gen();
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
